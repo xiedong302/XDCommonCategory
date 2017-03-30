@@ -9,6 +9,14 @@
 #ifndef XDCommonCategory_h
 #define XDCommonCategory_h
 
+#import "UILabel+XD.h"
 #import "UIView+XD.h"
+#import "NSDate+XD.h"
+#import "UIColor+XD.h"
+#import "UIImage+XD.h"
+#import "UIButton+XD.h"
+#import "UIBarButtonItem+XD.h"
+#import "NSString+Util.h"
+#import "UIImage+ImageEffects.h"
 
 #endif /* XDCommonCategory_h */
