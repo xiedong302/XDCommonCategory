@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "XDCommonCategory"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.summary      = "An easy way to use category"
   s.description  = <<-DESC
 		   It is marquee view used on IOS,which implement by Objective-C.
@@ -12,5 +12,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/xiedong302/XDCommonCategory.git", :tag => s.version.to_s }
   s.source_files  = 'XDCommonCategory/*'
   s.requires_arc = true
-  # s.dependency "JSONKit", "~> 1.4"
+  s.dependency "RegexKitLite"
 end

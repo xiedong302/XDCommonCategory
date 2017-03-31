@@ -46,4 +46,19 @@
  */
 
 + (NSString *)uuid;
+
+/**
+ * 验证是不是正确的手机号码
+ **/
++ (BOOL) isOKPhoneNumber:(NSString *)phoneNumber;
+
+/**
+ * 验证是不是正确的邮箱
+ **/
++ (BOOL) isOKEmail:(NSString *)email;
+
+/**
+   拨打电话
+ **/
++ (void) call:(NSString *)phoneNumber;
 @end

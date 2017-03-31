@@ -8,6 +8,10 @@
 
 #import "NSString+Util.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "RegexKitLite.h"
+
+#define kOK_PhoneNumber  @"^[1]([3|4|5|7|8][0-9]{1})[0-9]{8}$"
+#define kOK_Email        @"^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$"
 
 @implementation NSString (Util)
 
@@ -112,4 +116,28 @@
     return result;
 }
 
++ (BOOL)isOKPhoneNumber:(NSString *)phoneNumber {
+    if ([phoneNumber isMatchedByRegex:kOK_PhoneNumber])
+    {
+        return YES;
+    }
+    return NO;
+}
+
++ (BOOL)isOKEmail:(NSString *)email {
+    if ([email isMatchedByRegex:kOK_Email])
+    {
+        return YES;
+    }
+    return NO;
+}
++ (void)call:(NSString *)phoneNumber {
+    if ([NSString isOKPhoneNumber:phoneNumber])
+    {
+        NSString *telUrl = [NSString stringWithFormat:@"telprompt:%@", phoneNumber];
+        telUrl = [telUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSURL *url = [[NSURL alloc] initWithString:telUrl];
+        [[UIApplication sharedApplication] openURL:url];
+    }
+}
 @end
