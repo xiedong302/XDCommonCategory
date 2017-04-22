@@ -19,4 +19,11 @@
 @property (nonatomic, assign) CGFloat xd_centerX;
 @property (nonatomic, assign) CGFloat xd_centerY;
 
+/**
+ 给View添加点击手势
+ @param target 点击对象
+ @param action 点击事件
+ **/
+- (void)addViewTapGestureWithTarget:(id)target
+                              action:(SEL)action;
 @end

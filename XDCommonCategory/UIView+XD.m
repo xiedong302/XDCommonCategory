@@ -81,4 +81,11 @@
 - (CGFloat)xd_centerY {
     return self.center.y;
 }
+
+
+- (void)addViewTapGestureWithTarget:(id)target action:(SEL)action {
+    self.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
+    [self addGestureRecognizer:tapGesture];
+}
 @end
