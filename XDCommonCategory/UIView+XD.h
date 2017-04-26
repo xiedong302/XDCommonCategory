@@ -20,6 +20,19 @@
 @property (nonatomic, assign) CGFloat xd_centerY;
 
 /**
+ 设置View的圆角
+ @param cornerRadius 需要绘制的圆角大小
+ **/
+- (void)setViewWithCornerRadius:(NSInteger)cornerRadius;
+
+/**
+ 设置View的圆角边框
+ @param borderColor 边框颜色
+ @param borderWidth 边框宽度
+ **/
+- (void)setViewWithBorderColor:(UIColor *)borderColor
+                    borderWidth:(CGFloat)borderWidth;
+/**
  给View添加点击手势
  @param target 点击对象
  @param action 点击事件

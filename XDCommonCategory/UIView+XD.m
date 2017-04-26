@@ -82,7 +82,14 @@
     return self.center.y;
 }
 
-
+- (void)setViewWithCornerRadius:(NSInteger)cornerRadius {
+    self.layer.masksToBounds = YES;
+    self.layer.cornerRadius = cornerRadius;
+}
+- (void)setViewWithBorderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth {
+    self.layer.borderColor = borderColor.CGColor;
+    self.layer.borderWidth = borderWidth;
+}
 - (void)addViewTapGestureWithTarget:(id)target action:(SEL)action {
     self.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
