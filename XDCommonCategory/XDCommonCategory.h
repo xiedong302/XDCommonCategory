@@ -11,12 +11,12 @@
 
 #import "UILabel+XD.h"
 #import "UIView+XD.h"
-#import "NSDate+XD.h"
-#import "UIColor+XD.h"
-#import "UIImage+XD.h"
 #import "UIButton+XD.h"
+#import "UIImage+XD.h"
+#import "UIColor+XD.h"
 #import "UIBarButtonItem+XD.h"
 #import "NSString+Util.h"
-#import "UIImage+ImageEffects.h"
+#import "NSDate+XD.h"
+#import "UIImageView+XD.h"
 
 #endif /* XDCommonCategory_h */
