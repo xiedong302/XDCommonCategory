@@ -85,5 +85,45 @@
     NSDate* date = [formatter dateFromString:formatterStr];
     return [date timeIntervalSince1970];
 }
++ (NSString *)getFormatterDateStringWithDate:(NSDate *)date formatterType:(formatterType)formatterType {
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    if(formatterType==kformatterTypeLineYear) // 返回分割线的日期格式
+    {
+        [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        
+    }else if (formatterType==kformatterTypeChineseYear)// 返回文字的日期格式
+    {
+        [formatter setDateFormat:@"yyyy年MM月dd日 HH:mm:ss"];
+        
+    }else if (formatterType==kformatterTypeLine)// 不带年份的分割线分割
+    {
+        [formatter setDateFormat:@"MM-dd HH:mm:ss"];
+        
+    }else if (formatterType==kformatterTypeChinese)// 不带年份的中文分割
+    {
+        [formatter setDateFormat:@"MM月dd日 HH:mm:ss"];
+        
+    }else if (formatterType==kformatterTypeChineseNoSec)// 不带年份和秒数的中文分割
+    {
+        [formatter setDateFormat:@"MM月dd日 HH:mm"];
+        
+    }else if (formatterType==kformatterTypeLineNoSec)// 不带年份和秒数的分割线分割
+    {
+        [formatter setDateFormat:@"MM-dd HH:mm"];
+        
+    }else if (formatterType==kformatterTypeLineNoSecAndMin)// 不带秒数/分钟的分割线分割
+    {
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+        
+    }else if (formatterType==kformatterTypeChineseNoSecAndMin)// 不带秒数、分钟的中文
+    {
+        [formatter setDateFormat:@"yyyy年MM月dd日"];
+    } else if (formatterType==kformatterTypeHourAndMinAndSec) //没有年月日、只有时分秒
+    {
+        [formatter setDateFormat:@"HH:mm:ss"];
+    }
+    NSString *dateString = [formatter stringFromDate:date];
+    return dateString;
+}
 
 @end

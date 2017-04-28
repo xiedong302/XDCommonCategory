@@ -54,7 +54,15 @@ typedef enum : NSUInteger {
  @param formatterType 格式化规则  @"yyyy-mm-ss"
  @return 毫秒值
  */
-+ (long long) getMsecWithFormatter:(NSString *)formatterStr formatterType:(NSString *)formatterType;
++ (long long) getMsecWithFormatter:(NSString *)formatterStr
+                     formatterType:(NSString *)formatterType;
 
+/**
+ 根据指定的时间 返回指定格式的字符串
+ @param date           指定的时间
+ @param formatterType  指定的格式
+ **/
++ (NSString *)getFormatterDateStringWithDate:(NSDate *)date
+                               formatterType:(formatterType)formatterType;
 
 @end

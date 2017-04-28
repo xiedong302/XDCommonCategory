@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "XDCommonCategory"
-  s.version      = "1.1.5"
+  s.version      = "1.1.6"
   s.summary      = "An easy way to use category"
   s.description  = <<-DESC
 		   It is marquee view used on IOS,which implement by Objective-C.
