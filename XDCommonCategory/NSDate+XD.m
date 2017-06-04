@@ -42,7 +42,10 @@
     {
         [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
         
-    }else if (formattertype==kformatterTypeChineseYear)// 返回文字的日期格式
+    } else if (formattertype==kformatterTypeLineYearNoSec)
+    {
+        [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    } else if (formattertype==kformatterTypeChineseYear)// 返回文字的日期格式
     {
         [formatter setDateFormat:@"yyyy年MM月dd日 HH:mm:ss"];
         
@@ -91,6 +94,9 @@
     {
         [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
         
+    }else if (formatterType==kformatterTypeLineYearNoSec)
+    {
+        [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     }else if (formatterType==kformatterTypeChineseYear)// 返回文字的日期格式
     {
         [formatter setDateFormat:@"yyyy年MM月dd日 HH:mm:ss"];

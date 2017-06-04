@@ -17,6 +17,7 @@ typedef enum : NSUInteger {
 
 typedef enum : NSUInteger {
     kformatterTypeLineYear,  // 返回分割线的日期格式 2016-12-07 08:08:08
+    kformatterTypeLineYearNoSec, //返回分割线的日期格式 2016-12-07 08:08
     kformatterTypeChineseYear,  // 返回文字的日期格式 2016年12月07日 08:08:08
     kformatterTypeLine, // 不带年份的分割线分割 12-07 08:08:08
     kformatterTypeChinese, // 不带年份的中文分割  12月07日 08:08:08
