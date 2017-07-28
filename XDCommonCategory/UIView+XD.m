@@ -95,4 +95,13 @@
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
     [self addGestureRecognizer:tapGesture];
 }
+- (void)setViewRadiusUseBezierPathAndCAShapeLayer {
+    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:UIRectCornerAllCorners cornerRadii:self.bounds.size];
+    CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
+    //设置大小
+    shapeLayer.frame = self.bounds;
+    //这是图形样子
+    shapeLayer.path = bezierPath.CGPath;
+    self.layer.mask = shapeLayer;
+}
 @end

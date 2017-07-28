@@ -39,4 +39,12 @@
  **/
 - (void)addViewTapGestureWithTarget:(id)target
                               action:(SEL)action;
+
+
+/**
+ 利用CAShapeLayer 和 UIBezierPath设置圆角
+ 避免离屏渲染内存占用过大
+ 先有frame之后在设置
+ **/
+- (void)setViewRadiusUseBezierPathAndCAShapeLayer;
 @end
