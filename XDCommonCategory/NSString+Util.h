@@ -61,4 +61,14 @@
    拨打电话
  **/
 + (void) call:(NSString *)phoneNumber;
+
+/**
+   验证是否是纯汉字
+ **/
++ (BOOL)isChinese:(NSString *)string;
+
+/**
+   验证是否包含汉字
+ **/
++ (BOOL)isCludeChinese:(NSString *)string;
 @end

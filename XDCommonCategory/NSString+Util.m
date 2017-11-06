@@ -140,4 +140,18 @@
         [[UIApplication sharedApplication] openURL:url];
     }
 }
++ (BOOL)isChinese:(NSString *)string {
+    NSString *match = @"(^[\u4e00-\u9fa5]+$)";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];
+    return [predicate evaluateWithObject:string];
+}
++ (BOOL)isCludeChinese:(NSString *)string {
+    for (int i = 0; i < [string length]; i++) {
+        int a = [string characterAtIndex:i];
+        if (a > 0x4e00 && a < 0x9fff) {
+            return YES;
+        }
+    }
+    return NO;
+}
 @end
