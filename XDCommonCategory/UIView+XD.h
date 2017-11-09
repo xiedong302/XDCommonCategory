@@ -47,4 +47,13 @@
  先有frame之后在设置
  **/
 - (void)setViewRadiusUseBezierPathAndCAShapeLayer;
+
+
+/**
+ 利用CAShapeLayer 和 UIBezierPath设置圆角
+ 避免离屏渲染内存占用过大
+ @param radius 直径
+ **/
+- (void)setViewRadiusUseBezierPathAndCAShapeLayerWithRadius:(CGFloat)radius;
+
 @end

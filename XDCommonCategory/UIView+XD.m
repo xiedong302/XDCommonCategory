@@ -104,4 +104,14 @@
     shapeLayer.path = bezierPath.CGPath;
     self.layer.mask = shapeLayer;
 }
+- (void)setViewRadiusUseBezierPathAndCAShapeLayerWithRadius:(CGFloat)radius {
+    CGRect bounds = CGRectMake(0, 0, radius, radius);
+    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:bounds byRoundingCorners:UIRectCornerAllCorners cornerRadii:bounds.size];
+    CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
+    //设置大小
+    shapeLayer.frame = bounds;
+    //这是图形样子
+    shapeLayer.path = bezierPath.CGPath;
+    self.layer.mask = shapeLayer;
+}
 @end
